@@ -1,255 +1,551 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="David Leonard - Professional Web Developer in Imo State, Nigeria">
-    <title>David Leonard | Professional Web Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .heading { font-family: 'Space Grotesk', sans-serif; }
-        .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); }
-        .hero-bg { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); }
-        .section-title { position: relative; }
-        .section-title:after { content: ''; position: absolute; width: 60px; height: 3px; background: #8b5cf6; bottom: -8px; left: 50%; transform: translateX(-50%); }
-        .star { color: #fbbf24; }
-    </style>
-</head>
-<body class="bg-zinc-950 text-white">
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full glass z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-2xl font-bold">DL</div>
-                <span class="text-2xl font-semibold heading">David Leonard</span>
-            </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#home" class="hover:text-violet-400 transition">Home</a>
-                <a href="#about" class="hover:text-violet-400 transition">About</a>
-                <a href="#services" class="hover:text-violet-400 transition">Services</a>
-                <a href="#portfolio" class="hover:text-violet-400 transition">Portfolio</a>
-                <a href="#skills" class="hover:text-violet-400 transition">Skills</a>
-                <a href="#testimonials" class="hover:text-violet-400 transition">Testimonials</a>
-                <a href="#faq" class="hover:text-violet-400 transition">FAQ</a>
-                <a href="#contact" class="hover:text-violet-400 transition">Contact</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <button onclick="toggleTheme()" class="p-3 hover:bg-white/10 rounded-2xl transition"><i id="theme-icon" class="fas fa-moon text-xl"></i></button>
-                <a href="https://wa.me/2349162123734" target="_blank" rel="noopener noreferrer" class="px-7 py-3 bg-violet-600 hover:bg-violet-500 rounded-3xl font-semibold transition">Hire Me</a>
-            </div>
-        </div>
-    </nav>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="David Leonard — Professional Web Developer based in Imo State, Nigeria. Building modern, responsive, fast-loading websites and web applications." />
+  <meta name="keywords" content="web developer, Nigeria, responsive design, React, Node.js, portfolio, David Leonard" />
+  <meta name="author" content="David Leonard" />
+  <title>David Leonard | Web Developer</title>
 
-    <!-- Hero -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 bg-white/10 px-5 py-2 rounded-3xl text-sm">
-                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                    Available for new projects
-                </div>
-                <h1 class="heading text-6xl md:text-7xl font-bold leading-none tracking-tighter">David Leonard</h1>
-                <p class="text-3xl text-violet-300">Professional Web Developer</p>
-                <p class="text-xl text-zinc-300 max-w-lg">Crafting modern, responsive, and high-performance websites & applications from Imo State, Nigeria.</p>
-                <div class="flex flex-wrap gap-5">
-                    <a href="#portfolio" class="px-8 py-4 bg-white text-zinc-900 rounded-3xl font-semibold hover:scale-105 transition flex items-center gap-3">View My Work <i class="fas fa-arrow-right"></i></a>
-                    <a href="https://wa.me/2349162123734" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border border-white/60 hover:bg-white/10 rounded-3xl font-semibold transition">Hire Me</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-num">50+</div>
-                        <div class="hero-stat-label">Projects Delivered</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-num">30+</div>
-                        <div class="hero-stat-label">Happy Clients</div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <!-- Use profile.jpg image (user photo) -->
-                <div class="logo-frame" style="width:320px;height:320px;">
-                  <div class="logo-ring-outer"></div>
-                  <div class="logo-ring-inner"></div>
-                  <div class="logo-circle" style="width:220px;height:220px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
-                    <img src="profile.jpg" alt="David Leonard" style="width:100%;height:100%;object-fit:cover;display:block;">
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!-- Stats -->
-    <section class="py-12 bg-black border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div><div class="text-5xl font-bold text-violet-400">50+</div><div class="text-zinc-400">Projects Delivered</div></div>
-            <div><div class="text-5xl font-bold text-violet-400">30+</div><div class="text-zinc-400">Happy Clients</div></div>
-            <div><div class="text-5xl font-bold text-violet-400">100%</div><div class="text-zinc-400">Satisfaction</div></div>
-            <div><div class="text-5xl font-bold text-violet-400">2+</div><div class="text-zinc-400">Years Experience</div></div>
-        </div>
-    </section>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- About -->
-    <section id="about" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">About Me</h2>
-            <div class="max-w-4xl mx-auto text-lg text-zinc-300 leading-relaxed space-y-8">
-                <p>Hello! I'm David Leonard, a passionate web developer based in Imo State, Nigeria. I specialize in building modern, responsive, and fast-loading websites and web applications that deliver excellent user experiences.</p>
-                <p>My goal is to deliver clean, professional digital solutions with excellent user experience. I work closely with clients to understand their needs and turn ideas into reality.</p>
-            </div>
-        </div>
-    </section>
+  <style>
+    /* =============================================
+       CSS CUSTOM PROPERTIES
+    ============================================= */
+    :root {
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
 
-    <!-- Services -->
-    <section id="services" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Services</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Custom Website Development</div>
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Business & Corporate Websites</div>
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">High-Converting Landing Pages</div>
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Portfolio Websites</div>
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">E-commerce Solutions</div>
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Custom Web Applications</div>
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Maintenance & Support</div>
-                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Bug Fixing & Optimization</div>
-            </div>
-        </div>
-    </section>
+      --accent: #3B82F6;
+      --accent-2: #6366F1;
+      --accent-glow: rgba(59,130,246,0.35);
+      --accent-light: #60A5FA;
+      --green: #10B981;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: 0.3s cubic-bezier(.4,0,.2,1);
+      --shadow-card: 0 8px 40px rgba(0,0,0,0.18);
+    }
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="glass rounded-3xl overflow-hidden">
-                    <div class="h-80 bg-gradient-to-br from-violet-900 to-indigo-900 flex items-center justify-center text-7xl">💰</div>
-                    <div class="p-8">
-                        <h3 class="text-3xl font-semibold mb-3">CashDrops</h3>
-                        <p class="text-zinc-400 mb-6">A modern giveaway platform with clean and user-friendly interface for promotional campaigns.</p>
-                        <a href="https://dovespyce.github.io/couponcash/#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-violet-600 px-8 py-4 rounded-3xl hover:bg-violet-500">View Live</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    [data-theme="dark"] {
+      --bg: #080D1A;
+      --bg-2: #0D1424;
+      --bg-card: rgba(255,255,255,0.04);
+      --bg-card-hover: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.08);
+      --border-accent: rgba(59,130,246,0.3);
+      --text: #F0F4FF;
+      --text-muted: #8B9CC4;
+      --text-dim: #4B5A7A;
+      --nav-bg: rgba(8,13,26,0.85);
+    }
 
-    <!-- Skills -->
-    <section id="skills" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Skills</h2>
-            <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
-                <div class="space-y-8">
-                    <div><div class="flex justify-between mb-2"><span>HTML5</span><span>95%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[95%] bg-violet-500 rounded-full"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>CSS / Tailwind</span><span>92%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[92%] bg-violet-500 rounded-full"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>JavaScript</span><span>90%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[90%] bg-violet-500 rounded-full"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>React</span><span>85%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[85%] bg-violet-500 rounded-full"></div></div></div>
-                </div>
-                <div class="space-y-8">
-                    <div><div class="flex justify-between mb-2"><span>Node.js</span><span>80%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[80%] bg-violet-500 rounded-full"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>PHP & Python</span><span>75%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[75%] bg-violet-500 rounded-full"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>API Integration</span><span>88%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[88%] bg-violet-500 rounded-full"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>Git</span><span>90%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[90%] bg-violet-500 rounded-full"></div></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    [data-theme="light"] {
+      --bg: #F4F7FF;
+      --bg-2: #EBF0FF;
+      --bg-card: rgba(255,255,255,0.8);
+      --bg-card-hover: rgba(255,255,255,0.95);
+      --border: rgba(0,0,0,0.08);
+      --border-accent: rgba(59,130,246,0.25);
+      --text: #0F172A;
+      --text-muted: #4B5A7A;
+      --text-dim: #94A3B8;
+      --nav-bg: rgba(244,247,255,0.85);
+    }
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Client Testimonials</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" class="w-12 h-12 rounded-full">
-                        <div>
-                            <p class="font-semibold">John Smith</p>
-                            <p class="text-sm text-zinc-400">CEO, TechFlow Solutions</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-4">★★★★★</div>
-                    <p class="text-zinc-300">"David built an exceptional website for our company. Professional, fast, and exactly what we needed. Highly recommend!"</p>
-                </div>
-                <div class="glass p-8 rounded-3xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Johnson" class="w-12 h-12 rounded-full">
-                        <div>
-                            <p class="font-semibold">Emma Johnson</p>
-                            <p class="text-sm text-zinc-400">Founder, Nova Startup</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-4">★★★★★</div>
-                    <p class="text-zinc-300">"Amazing experience! The e-commerce site David created is beautiful and performs perfectly. Very talented developer."</p>
-                </div>
-                <div class="glass p-8 rounded-3xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full">
-                        <div>
-                            <p class="font-semibold">Michael Chen</p>
-                            <p class="text-sm text-zinc-400">Director, Global Ventures</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-4">★★★★★</div>
-                    <p class="text-zinc-300">"Outstanding work on our portfolio site. Clean design, great communication, and delivered on time. Will work with him again!"</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background var(--transition), color var(--transition);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-black">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">FAQ</h2>
-            <div class="space-y-6">
-                <div class="glass p-8 rounded-3xl"><strong>How long does a typical project take?</strong><p class="mt-3 text-zinc-400">Usually 7-21 days depending on scope.</p></div>
-                <div class="glass p-8 rounded-3xl"><strong>Do you offer maintenance?</strong><p class="mt-3 text-zinc-400">Yes, flexible monthly support packages.</p></div>
-                <div class="glass p-8 rounded-3xl"><strong>Are websites mobile responsive?</strong><p class="mt-3 text-zinc-400">Yes, fully responsive on all devices.</p></div>
-            </div>
-        </div>
-    </section>
+    /* =============================================
+       LOADER
+    ============================================= */
+    #loader {
+      position: fixed; inset: 0;
+      background: #080D1A;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; }
+    .loader-inner {
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+    }
+    .loader-logo {
+      font-family: var(--font-display);
+      font-size: 2rem; font-weight: 800;
+      background: linear-gradient(135deg, #3B82F6, #6366F1);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .loader-bar {
+      width: 200px; height: 3px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 99px; overflow: hidden;
+    }
+    .loader-progress {
+      height: 100%; width: 0;
+      background: linear-gradient(90deg, #3B82F6, #6366F1);
+      border-radius: 99px;
+      animation: loadProgress 1.8s ease forwards;
+    }
+    @keyframes loadProgress { to { width: 100%; } }
 
-    <!-- Contact -->
-    <section id="contact" class="py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="heading text-5xl font-semibold mb-6">Let's Build Something Great</h2>
-            <div class="flex flex-wrap justify-center gap-4 mb-8">
-                <a href="https://wa.me/2349162123734" target="_blank" rel="noopener noreferrer" class="btn btn-primary">WhatsApp</a>
-                <a href="mailto:chilakadavid49@gmail.com" class="btn btn-outline">Email</a>
-                <a href="tel:09074261365" class="btn btn-outline">Call</a>
-            </div>
-            <form action="https://formspree.io/f/YOUR_CODE_HERE" method="POST" class="space-y-6 max-w-2xl mx-auto">
-                <input type="text" name="name" placeholder="Your Name" required class="w-full glass px-8 py-6 rounded-3xl">
-                <input type="email" name="email" placeholder="Email" required class="w-full glass px-8 py-6 rounded-3xl">
-                <textarea name="message" rows="6" placeholder="Project details..." required class="w-full glass px-8 py-6 rounded-3xl"></textarea>
-                <button type="submit" class="w-full py-7 bg-violet-600 hover:bg-violet-500 rounded-3xl font-semibold text-xl">Send Message</button>
-            </form>
-        </div>
-    </section>
+    /* =============================================
+       SCROLLBAR
+    ============================================= */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 99px; }
 
-    <footer class="bg-black py-12 text-center text-zinc-500">
-        <p>&copy; 2026 David Leonard. All Rights Reserved.</p>
-        <p>Imo State, Nigeria • 09162123734 • 07070818332</p>
-    </footer>
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 24px;
+      height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.35rem; font-weight: 800;
+      background: linear-gradient(135deg, #3B82F6, #6366F1);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 6px;
+    }
+    .nav-links a {
+      font-size: 0.875rem; font-weight: 500;
+      color: var(--text-muted);
+      padding: 7px 14px; border-radius: 8px;
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text);
+      background: var(--bg-card);
+    }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .theme-btn {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      transition: all var(--transition);
+    }
+    .theme-btn:hover { color: var(--accent); border-color: var(--border-accent); }
+    .nav-cta {
+      padding: 8px 20px; border-radius: 10px;
+      background: var(--accent);
+      color: #fff; font-size: 0.875rem; font-weight: 600;
+      transition: all var(--transition);
+      box-shadow: 0 4px 15px var(--accent-glow);
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px var(--accent-glow); }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      width: 40px; height: 40px;
+      align-items: center; justify-content: center;
+      border-radius: 10px; background: var(--bg-card);
+      border: 1px solid var(--border);
+    }
+    .hamburger span {
+      display: block; width: 20px; height: 2px;
+      background: var(--text); border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    <script>
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            const icon = document.getElementById('theme-icon');
-            icon.classList.toggle('fa-moon');
-            icon.classList.toggle('fa-sun');
-        }
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px 24px;
+      flex-direction: column; gap: 4px;
+      z-index: 99;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 12px 16px; border-radius: 10px;
+      color: var(--text-muted); font-weight: 500;
+      transition: all var(--transition);
+    }
+    .mobile-menu a:hover { background: var(--bg-card); color: var(--text); }
+
+    /* =============================================
+       SECTIONS BASE
+    ============================================= */
+    section { padding: 100px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem; font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .section-label::before {
+      content: '';
+      display: block; width: 28px; height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800; line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 1.05rem; max-width: 560px;
+      line-height: 1.75;
+    }
+    .section-header { margin-bottom: 60px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-label { justify-content: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 12px;
+      font-size: 0.95rem; font-weight: 600;
+      transition: all var(--transition);
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px var(--accent-glow);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(59,130,246,0.06);
+    }
+
+    /* =============================================
+       CARDS
+    ============================================= */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(12px);
+      transition: all var(--transition);
+    }
+    .glass-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+
+    /* =============================================
+       HERO SECTION
+    ============================================= */
+    #home {
+      min-height: 100vh;
+      padding-top: 110px;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    }
+    .hero-orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); opacity: 0.18;
+    }
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, #3B82F6, transparent);
+      top: -100px; right: -100px;
+      animation: floatOrb 8s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #6366F1, transparent);
+      bottom: -50px; left: -80px;
+      animation: floatOrb 10s ease-in-out infinite alternate-reverse;
+    }
+    .orb-3 {
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, #10B981, transparent);
+      top: 40%; left: 50%;
+      animation: floatOrb 6s ease-in-out infinite alternate;
+    }
+    @keyframes floatOrb {
+      from { transform: translate(0, 0) scale(1); }
+      to { transform: translate(20px, 20px) scale(1.1); }
+    }
+    .hero-grid-lines {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.4;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+      width: 100%; max-width: 1200px; margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px; border-radius: 99px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--accent); margin-bottom: 24px;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -1px; margin-bottom: 20px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(135deg, #3B82F6 0%, #6366F1 50%, #818CF8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+    .hero-desc {
+      font-size: 1.1rem; color: var(--text-muted);
+      line-height: 1.8; margin-bottom: 36px; max-width: 480px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-stats {
+      display: flex; gap: 32px; flex-wrap: wrap;
+    }
+    .hero-stat { display: flex; flex-direction: column; }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #3B82F6, #6366F1);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+    /* Profile Visual */
+    .hero-visual {
+      display: flex; justify-content: center; align-items: center;
+      position: relative;
+    }
+    .profile-frame {
+      position: relative; width: 340px; height: 340px;
+    }
+    .profile-ring {
+      position: absolute; inset: -16px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background: linear-gradient(135deg, #3B82F6, #6366F1, transparent, #3B82F6) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      animation: rotateBorder 6s linear infinite;
+    }
+    @keyframes rotateBorder { to { transform: rotate(360deg); } }
+    .profile-img-wrap {
+      width: 100%; height: 100%; border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(99,102,241,0.15));
+      border: 3px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .profile-placeholder {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      color: var(--text-dim);
+    }
+    .profile-placeholder i { font-size: 5rem; color: var(--accent); opacity: 0.3; }
+    .profile-placeholder span { font-size: 0.75rem; color: var(--text-dim); }
+    .profile-badge {
+      position: absolute;
+      padding: 10px 16px; border-radius: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.8rem; font-weight: 600;
+      white-space: nowrap;
+    }
+    .badge-top { top: 10px; right: -30px; }
+    .badge-bottom { bottom: 20px; left: -30px; }
+    .badge-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .badge-icon.blue { background: rgba(59,130,246,0.15); color: #3B82F6; }
+    .badge-icon.green { background: rgba(16,185,129,0.15); color: #10B981; }
+    .badge-icon.purple { background: rgba(99,102,241,0.15); color: #6366F1; }
+    .floating-tech {
+      position: absolute;
+      width: 46px; height: 46px; border-radius: 12px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; backdrop-filter: blur(8px);
+      animation: floatIcon 4s ease-in-out infinite alternate;
+    }
+    .tech-1 { top: -10px; left: -10px; animation-delay: 0s; }
+    .tech-2 { top: 50%; right: -20px; animation-delay: 1s; }
+    .tech-3 { bottom: 0; right: 40px; animation-delay: 2s; }
+    @keyframes floatIcon {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    /* =============================================
+       ABOUT SECTION
+    ============================================= */
+    #about { background: var(--bg-2); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 64px; align-items: center;
+    }
+    .about-card-wrap {
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .about-info-card {
+      padding: 24px; border-radius: var(--radius);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+    }
+    .about-info-label {
+      font-size: 0.75rem; color: var(--text-dim);
+      font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 6px;
+    }
+    .about-info-val {
+      font-size: 1rem; font-weight: 600; color: var(--text);
+    }
+    .about-img-main {
+      width: 100%; aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(99,102,241,0.1));
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 12px; color: var(--text-dim);
+    }
+    .about-img-main i { font-size: 3rem; opacity: 0.3; }
+    .about-text p {
+      color: var(--text-muted); font-size: 1rem;
+      line-height: 1.85; margin-bottom: 20px;
+    }
+    .about-perks { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+    .about-perk {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 16px; border-radius: var(--radius-sm);
+      background: var(--bg-card); border: 1px solid var(--border);
+      font-size: 0.875rem; font-weight: 500;
+    }
+    .about-perk i { color: var(--accent); }
+
+    /* =============================================
+       SERVICES SECTION
+    ============================================= */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      padding: 32px 28px;
+    }
+    .service-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(99,102,241,0.1));
+      border: 1px solid var(--border-accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 20px;
+      color: var(--accent);
+      transition: all var(--transition);
+    }
+    .service-card:hover .service-icon {
+      background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(99,102,241,0.2));
+      transform: scale(1.05);
+    }
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .service-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* =============================================
+       PORTFOLIO SECTION
+    ============================================= */
+    #portfolio { background: var(--bg-2); }
+    .portfolio-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+    .project-card {
+      overflow: hidden;
+    }
+    .project-img {
+      position: relative; aspect-ratio: 16/9;
+      background: linear-gradient(135deg, rgba(59,130,24
