@@ -60,7 +60,37 @@
                 </div>
             </div>
             <div class="flex justify-center">
-                <img src="profile.svg" alt="David Leonard" class="w-80 h-80 object-cover rounded-full shadow-2xl ring-8 ring-violet-500/30">
+                <!-- Inline SVG logo replaces profile image -->
+                <div class="w-80 h-80 rounded-full shadow-2xl ring-8 ring-violet-500/30 overflow-hidden bg-transparent flex items-center justify-center">
+                    <svg class="w-full h-full block" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dlTitle dlDesc">
+                        <title id="dlTitle">DL logo</title>
+                        <desc id="dlDesc">Colorful circular logo with the initials D L</desc>
+                        <defs>
+                            <linearGradient id="gradDL" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#ff7a7a" />
+                                <stop offset="50%" stop-color="#ffd86b" />
+                                <stop offset="100%" stop-color="#7c4dff" />
+                            </linearGradient>
+                            <radialGradient id="gloss" cx="30%" cy="20%" r="80%">
+                                <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
+                                <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                            </radialGradient>
+                            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.45" />
+                            </filter>
+                        </defs>
+                        <g filter="url(#shadow)">
+                            <circle cx="100" cy="100" r="90" fill="url(#gradDL)" />
+                            <circle cx="70" cy="60" r="55" fill="url(#gloss)" opacity="0.25" />
+                        </g>
+                        <text x="50%" y="58%" text-anchor="middle" font-family="'Space Grotesk', Inter, sans-serif" font-weight="700" font-size="76" fill="#ffffff">DL</text>
+                        <!-- subtle accent shapes -->
+                        <g opacity="0.12" fill="#ffffff">
+                            <circle cx="150" cy="40" r="6" />
+                            <circle cx="40" cy="150" r="4" />
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -80,7 +110,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">About Me</h2>
             <div class="max-w-4xl mx-auto text-lg text-zinc-300 leading-relaxed space-y-8">
-                <p>Hello! I'm David Leonard, a passionate web developer based in Imo State, Nigeria. I specialize in building modern, responsive, and fast-loading websites and web applications that help businesses grow.</p>
+                <p>Hello! I'm David Leonard, a passionate web developer based in Imo State, Nigeria. I specialize in building modern, responsive, and fast-loading websites and web applications that deliver excellent user experiences.</p>
                 <p>My goal is to deliver clean, professional digital solutions with excellent user experience. I work closely with clients to understand their needs and turn ideas into reality.</p>
             </div>
         </div>
@@ -113,7 +143,7 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-semibold mb-3">CashDrops</h3>
                         <p class="text-zinc-400 mb-6">A modern giveaway platform with clean and user-friendly interface for promotional campaigns.</p>
-                        <a href="https://dovespyce.github.io/couponcash/#" target="_blank" class="inline-flex items-center gap-3 bg-violet-600 px-8 py-4 rounded-3xl hover:bg-violet-500">View Live Demo</a>
+                        <a href="https://dovespyce.github.io/couponcash/#" target="_blank" class="inline-flex items-center gap-3 bg-violet-600 px-8 py-4 rounded-3xl hover:bg-violet-500">View Live</a>
                     </div>
                 </div>
             </div>
