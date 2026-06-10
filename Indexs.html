@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="David Leonard - Professional Web Developer in Imo State, Nigeria">
+    <title>David Leonard | Professional Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .heading { font-family: 'Space Grotesk', sans-serif; }
+        .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); }
+        .hero-bg { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); }
+        .section-title { position: relative; }
+        .section-title:after { content: ''; position: absolute; width: 60px; height: 3px; background: #8b5cf6; bottom: -8px; left: 50%; transform: translateX(-50%); }
+        .star { color: #fbbf24; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full glass z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-violet-600 rounded-2xl flex items-center justify-center text-2xl font-bold">DL</div>
+                <span class="text-2xl font-semibold heading">David Leonard</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-violet-400 transition">Home</a>
+                <a href="#about" class="hover:text-violet-400 transition">About</a>
+                <a href="#services" class="hover:text-violet-400 transition">Services</a>
+                <a href="#portfolio" class="hover:text-violet-400 transition">Portfolio</a>
+                <a href="#skills" class="hover:text-violet-400 transition">Skills</a>
+                <a href="#testimonials" class="hover:text-violet-400 transition">Testimonials</a>
+                <a href="#faq" class="hover:text-violet-400 transition">FAQ</a>
+                <a href="#contact" class="hover:text-violet-400 transition">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="toggleTheme()" class="p-3 hover:bg-white/10 rounded-2xl transition"><i id="theme-icon" class="fas fa-moon text-xl"></i></button>
+                <a href="#contact" class="px-7 py-3 bg-violet-600 hover:bg-violet-500 rounded-3xl font-semibold transition">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/10 px-5 py-2 rounded-3xl text-sm">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    Available for new projects
+                </div>
+                <h1 class="heading text-6xl md:text-7xl font-bold leading-none tracking-tighter">David Leonard</h1>
+                <p class="text-3xl text-violet-300">Professional Web Developer</p>
+                <p class="text-xl text-zinc-300 max-w-lg">Crafting modern, responsive, and high-performance websites & applications from Imo State, Nigeria.</p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="#portfolio" class="px-8 py-4 bg-white text-zinc-900 rounded-3xl font-semibold hover:scale-105 transition flex items-center gap-3">View My Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="px-8 py-4 border border-white/60 hover:bg-white/10 rounded-3xl font-semibold transition">Hire Me</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="profile.jpg" alt="David Leonard" class="w-80 h-80 object-cover rounded-full shadow-2xl ring-8 ring-violet-500/30">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-12 bg-black border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><div class="text-5xl font-bold text-violet-400">50+</div><div class="text-zinc-400">Projects Delivered</div></div>
+            <div><div class="text-5xl font-bold text-violet-400">30+</div><div class="text-zinc-400">Happy Clients</div></div>
+            <div><div class="text-5xl font-bold text-violet-400">100%</div><div class="text-zinc-400">Satisfaction</div></div>
+            <div><div class="text-5xl font-bold text-violet-400">2+</div><div class="text-zinc-400">Years Experience</div></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">About Me</h2>
+            <div class="max-w-4xl mx-auto text-lg text-zinc-300 leading-relaxed space-y-8">
+                <p>Hello! I'm David Leonard, a passionate web developer based in Imo State, Nigeria. I specialize in building modern, responsive, and fast-loading websites and web applications that help businesses succeed online.</p>
+                <p>My goal is to deliver clean, professional digital solutions with excellent user experience. I work closely with clients to understand their needs and turn ideas into reality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Custom Website Development</div>
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Business & Corporate Websites</div>
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">High-Converting Landing Pages</div>
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Portfolio Websites</div>
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">E-commerce Solutions</div>
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Custom Web Applications</div>
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Maintenance & Support</div>
+                <div class="glass p-8 rounded-3xl hover:scale-105 transition">Bug Fixing & Optimization</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="glass rounded-3xl overflow-hidden">
+                    <div class="h-80 bg-gradient-to-br from-violet-900 to-indigo-900 flex items-center justify-center text-7xl">💰</div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-3">CashDrops</h3>
+                        <p class="text-zinc-400 mb-6">A modern giveaway platform with clean and user-friendly interface for promotional campaigns.</p>
+                        <a href="https://dovespyce.github.io/couponcash/#" target="_blank" class="inline-flex items-center gap-3 bg-violet-600 px-8 py-4 rounded-3xl hover:bg-violet-500">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Skills</h2>
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
+                <div class="space-y-8">
+                    <div><div class="flex justify-between mb-2"><span>HTML5</span><span>95%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[95%] bg-violet-500 rounded-full"></div></div></div>
+                    <div><div class="flex justify-between mb-2"><span>CSS / Tailwind</span><span>92%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[92%] bg-violet-500 rounded-full"></div></div></div>
+                    <div><div class="flex justify-between mb-2"><span>JavaScript</span><span>90%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[90%] bg-violet-500 rounded-full"></div></div></div>
+                    <div><div class="flex justify-between mb-2"><span>React</span><span>85%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[85%] bg-violet-500 rounded-full"></div></div></div>
+                </div>
+                <div class="space-y-8">
+                    <div><div class="flex justify-between mb-2"><span>Node.js</span><span>80%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[80%] bg-violet-500 rounded-full"></div></div></div>
+                    <div><div class="flex justify-between mb-2"><span>PHP & Python</span><span>75%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[75%] bg-violet-500 rounded-full"></div></div></div>
+                    <div><div class="flex justify-between mb-2"><span>API Integration</span><span>88%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[88%] bg-violet-500 rounded-full"></div></div></div>
+                    <div><div class="flex justify-between mb-2"><span>Git</span><span>90%</span></div><div class="h-2.5 bg-zinc-800 rounded-full"><div class="h-2.5 w-[90%] bg-violet-500 rounded-full"></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">Client Testimonials</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-semibold">John Smith</p>
+                            <p class="text-sm text-zinc-400">CEO, TechFlow Solutions</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">★★★★★</div>
+                    <p class="text-zinc-300">"David built an exceptional website for our company. Professional, fast, and exactly what we needed. Highly recommend!"</p>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Johnson" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-semibold">Emma Johnson</p>
+                            <p class="text-sm text-zinc-400">Founder, Nova Startup</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">★★★★★</div>
+                    <p class="text-zinc-300">"Amazing experience! The e-commerce site David created is beautiful and performs perfectly. Very talented developer."</p>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-semibold">Michael Chen</p>
+                            <p class="text-sm text-zinc-400">Director, Global Ventures</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">★★★★★</div>
+                    <p class="text-zinc-300">"Outstanding work on our portfolio site. Clean design, great communication, and delivered on time. Will work with him again!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="heading text-5xl font-semibold text-center mb-16 section-title">FAQ</h2>
+            <div class="space-y-6">
+                <div class="glass p-8 rounded-3xl"><strong>How long does a typical project take?</strong><p class="mt-3 text-zinc-400">Usually 7-21 days depending on scope.</p></div>
+                <div class="glass p-8 rounded-3xl"><strong>Do you offer maintenance?</strong><p class="mt-3 text-zinc-400">Yes, flexible monthly support packages.</p></div>
+                <div class="glass p-8 rounded-3xl"><strong>Are websites mobile responsive?</strong><p class="mt-3 text-zinc-400">Yes, fully responsive on all devices.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="heading text-5xl font-semibold mb-6">Let's Build Something Great</h2>
+            <form action="https://formspree.io/f/YOUR_CODE_HERE" method="POST" class="space-y-6 max-w-2xl mx-auto">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full glass px-8 py-6 rounded-3xl">
+                <input type="email" name="email" placeholder="Email" required class="w-full glass px-8 py-6 rounded-3xl">
+                <textarea name="message" rows="6" placeholder="Project details..." required class="w-full glass px-8 py-6 rounded-3xl"></textarea>
+                <button type="submit" class="w-full py-7 bg-violet-600 hover:bg-violet-500 rounded-3xl font-semibold text-xl">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 text-center text-zinc-500">
+        <p>&copy; 2026 David Leonard. All Rights Reserved.</p>
+        <p>Imo State, Nigeria • 09162123734 • 07070818332</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
