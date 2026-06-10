@@ -38,7 +38,8 @@
             </div>
             <div class="flex items-center gap-4">
                 <button onclick="toggleTheme()" class="p-3 hover:bg-white/10 rounded-2xl transition"><i id="theme-icon" class="fas fa-moon text-xl"></i></button>
-                <a href="#contact" class="px-7 py-3 bg-violet-600 hover:bg-violet-500 rounded-3xl font-semibold transition">Hire Me</a>
+                <!-- Hire Me now opens WhatsApp -->
+                <a href="https://wa.me/2349162123734" target="_blank" rel="noopener noreferrer" class="px-7 py-3 bg-violet-600 hover:bg-violet-500 rounded-3xl font-semibold transition">Hire Me</a>
             </div>
         </div>
     </nav>
@@ -55,12 +56,24 @@
                 <p class="text-3xl text-violet-300">Professional Web Developer</p>
                 <p class="text-xl text-zinc-300 max-w-lg">Crafting modern, responsive, and high-performance websites & applications from Imo State, Nigeria.</p>
                 <div class="flex flex-wrap gap-5">
+                    <!-- View My Work scrolls to portfolio -->
                     <a href="#portfolio" class="px-8 py-4 bg-white text-zinc-900 rounded-3xl font-semibold hover:scale-105 transition flex items-center gap-3">View My Work <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="px-8 py-4 border border-white/60 hover:bg-white/10 rounded-3xl font-semibold transition">Hire Me</a>
+                    <!-- Hire Me opens WhatsApp -->
+                    <a href="https://wa.me/2349162123734" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border border-white/60 hover:bg-white/10 rounded-3xl font-semibold transition">Hire Me</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">50+</div>
+                        <div class="hero-stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">30+</div>
+                        <div class="hero-stat-label">Happy Clients</div>
+                    </div>
                 </div>
             </div>
             <div class="flex justify-center">
-                <!-- Use profile.jpg image -->
+                <!-- Use profile.jpg (user photo) -->
                 <img src="profile.jpg" alt="David Leonard" class="w-80 h-80 object-cover rounded-full shadow-2xl ring-8 ring-violet-500/30">
             </div>
         </div>
@@ -114,7 +127,7 @@
                     <div class="p-8">
                         <h3 class="text-3xl font-semibold mb-3">CashDrops</h3>
                         <p class="text-zinc-400 mb-6">A modern giveaway platform with clean and user-friendly interface for promotional campaigns.</p>
-                        <a href="https://dovespyce.github.io/couponcash/#" target="_blank" class="inline-flex items-center gap-3 bg-violet-600 px-8 py-4 rounded-3xl hover:bg-violet-500">View Live</a>
+                        <a href="https://dovespyce.github.io/couponcash/#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-violet-600 px-8 py-4 rounded-3xl hover:bg-violet-500">View Live</a>
                     </div>
                 </div>
             </div>
@@ -200,6 +213,12 @@
     <section id="contact" class="py-24 bg-zinc-900">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="heading text-5xl font-semibold mb-6">Let's Build Something Great</h2>
+            <!-- Quick contact buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="https://wa.me/2349162123734" target="_blank" rel="noopener noreferrer" class="btn btn-primary">WhatsApp</a>
+                <a href="mailto:chilakadavid49@gmail.com" class="btn btn-outline">Email</a>
+                <a href="tel:09074261365" class="btn btn-outline">Call</a>
+            </div>
             <form action="https://formspree.io/f/YOUR_CODE_HERE" method="POST" class="space-y-6 max-w-2xl mx-auto">
                 <input type="text" name="name" placeholder="Your Name" required class="w-full glass px-8 py-6 rounded-3xl">
                 <input type="email" name="email" placeholder="Email" required class="w-full glass px-8 py-6 rounded-3xl">
